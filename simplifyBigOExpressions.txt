@@ -1,3 +1,5 @@
+Step 1
+
 O(n + 10) = O(1)
 O(100 * n) = O(1)
 O(25)  =  O(1)
@@ -8,3 +10,15 @@ O(1000 * n * log(n) + n) = O(n*log(n))
 O(2^n + n^2) = O(n^2)
 O(5 + 3 + 1) = O(1)
 O(n + n^(1/2) + n^2 + n * log(n)^10) = O(log(n))
+
+
+step 2, Time complexities of functions
+
+function logUpTo(n) {
+  for (let i = 1; i <= n; i++) {
+    console.log(i);
+  }
+}
+Time complexity: O(n)
+
+
