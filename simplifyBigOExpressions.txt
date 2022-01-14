@@ -1,15 +1,16 @@
 Step 1
+Always look at worst case scenario. In other words, look for where you have to do maximum computations
 
-O(n + 10) = O(1)
-O(100 * n) = O(1)
+O(n + 10) = O(n) or O(1) = O(n)
+O(100 * n) = O(100n) = O(n)
 O(25)  =  O(1)
 O(n^2 + n^3)  = O(n^3)
 O(n + n + n + n) = O(n)
-O(1000 * log(n) + n) = O(log(n))
-O(1000 * n * log(n) + n) = O(n*log(n))
-O(2^n + n^2) = O(n^2)
+O(1000 * log(n) + n) = O(log(n))    I am not sure in this one, may be O(n)
+O(1000 * n * log(n) + n) = O(n*log(n)) = O(nlogn)
+O(2^n + n^2) = O(2^n)   Exponent is worst case scenario
 O(5 + 3 + 1) = O(1)
-O(n + n^(1/2) + n^2 + n * log(n)^10) = O(log(n))
+O(n + n^(1/2) + n^2 + n * log(n)^10) = O(n^2) Exponential function grows faster than logarithmic function
 
 
 step 2, Time complexities of functions
@@ -28,7 +29,7 @@ function logAtLeast10(n) {
     console.log(i);
   }
 }
-Time complexity: o(n)
+Time complexity: O(n)   min is 10 max is n
 
 3. 
 function logAtMost10(n) {
@@ -36,7 +37,7 @@ function logAtMost10(n) {
     console.log(i);
   }
 }
-Time complexity: O(n)
+Time complexity: max = 10, so it is O(1) 
 
 4. 
 function onlyElementsAtEvenIndex(array) {
@@ -48,7 +49,7 @@ function onlyElementsAtEvenIndex(array) {
   }
   return newArray;
 }
-Time complexity: O(n^2) 
+Time complexity: O(n^2) Wrong it is O(n)
 
 5. 
 function subtotals(array) {
@@ -81,7 +82,7 @@ function vowelCount(str) {
 
   return vowelCount;
 }
-Time complexity: O(n^3) 
+Time complexity: O(n^3)   Wrong it is O(n) b/c vowels is fixed length
 
 
 Part 3 - short answer
@@ -93,13 +94,13 @@ True or false: n^2 * n is O(n^3). True
 
 True or false: n^2 + n is O(n).   False
 
-What’s the time complexity of the .indexOf array method?  O(1)
+What’s the time complexity of the .indexOf array method?  O(n)
 
-What’s the time complexity of the .includes array method? O(1)
+What’s the time complexity of the .includes array method? O(1) 
 
 What’s the time complexity of the .forEach array method? O(n)
 
-What’s the time complexity of the .sort array method? O(n)
+What’s the time complexity of the .sort array method? O(n) 
 
 What’s the time complexity of the .unshift array method? O(1)
 
